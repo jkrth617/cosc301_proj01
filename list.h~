@@ -9,7 +9,7 @@ struct node {
 
 
 void validity_create(struct node ** head, char* str);
-void LL_create_sort(struct node ** head, int new_val);
+void LL_create_sort(struct node ** head, char* token);
 void list_print(const struct node *list);
 void list_destroy(struct node * head);
 #endif // __LIST_H__

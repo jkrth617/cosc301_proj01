@@ -10,7 +10,7 @@ void validity_create(struct node** head, char* token){
 	int j = 0;
 	if(token[0]=='-'){
 		j = 1;//skip the '-' in the for loop below
-		neg=1;//set a boolean (used later)
+		neg=1;
 	}
 	for(j; j<= (strlen(token)-1); j++){
 		int tester = isdigit(token[j]);
@@ -22,12 +22,12 @@ void validity_create(struct node** head, char* token){
 	if (valid==1){//no non numbers were found so valid wasnt changed
 		int new_val=0;			
 		if(neg==1){				
-			token[0] = '0';//replace the - with 0 so it doesnt do anything to the number value
+			token[0] = '0';
 			new_val=atoi(token);
-			new_val= new_val*(-1);//make it negative
+			new_val= new_val*(-1);
 		}			
 		else{			
-			new_val=atoi(token);//else just make it an int
+			new_val=atoi(token);
 		}
 		LL_create_sort(head, new_val);
 	}

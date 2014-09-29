@@ -68,7 +68,8 @@ int main(int argc, char **argv) {
             /* open the file, assign to datafile */
             datafile = fopen(argv[1], "r");
             if (datafile == NULL) {
-                printf("Unable to open file %s: %s\n", argv[1], strerror(errno));              
+                printf("Unable to open file %s: %s\n", argv[1], strerror(errno));
+		                
 		exit(-1);
             }
             break;
